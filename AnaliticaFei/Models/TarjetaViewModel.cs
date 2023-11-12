@@ -13,7 +13,7 @@ namespace AnaliticaFei.Models
         public string Name { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
-        [Display(Name = "Fecha de expiración")]
+        [Display(Name = "Expiración")]
         public string Expiry { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]

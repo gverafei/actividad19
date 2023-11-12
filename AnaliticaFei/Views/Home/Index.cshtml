@@ -32,30 +32,31 @@
             <div class="card-body">
                 <form>
                     <label asp-for="Card_number" class="form-label"></label>
-                    <div class="input-group mb-3">
+                    <div class="input-group">
                         <span class="input-group-text" id="card-type-addon1"><span class="card-type"></span></span>
-                        <input asp-for="Card_number" class="form-control" placeholder="0000 0000 0000 0000" aria-label="Tarjeta de crédito" aria-describedby="card-type-addon1">
-                        <div class="card-valid">&#x2713;</div>
-                        <div>
-                            <span asp-validation-for="Card_number" class="text-danger"></span>
-                        </div>
+                        <input asp-for="Card_number" class="form-control" placeholder="0000 0000 0000 0000" 
+                        aria-label="Tarjeta de crédito" aria-describedby="card-type-addon1">
+                        <div class="card-valid">&#x2713;</div>                        
                     </div>
                     <div class="mb-3">
-                        <label asp-for="Name" class="form-label">Nombre como aparece en la tarjeta</label>
+                        <span asp-validation-for="Card_number" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label"></label>
                         <input asp-for="Name" type="text" class="form-control text-uppercase" placeholder="Nombre como aparece en la tarjeta">
                         <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
                     <div class="row mb-3">
                         <div class="col">
                             <div class="mb-3">
-                                <label asp-for="Expiry" class="form-label">Fecha de expiración</label>
+                                <label asp-for="Expiry" class="form-label"></label>
                                 <input asp-for="Expiry" type="text" maxlength="7" class="form-control" placeholder="mm/yyyy">
                                 <span asp-validation-for="Expiry" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
-                                <label asp-for="Cvv" class="form-label">CVV</label>
+                                <label asp-for="Cvv" class="form-label"></label>
                                 <input asp-for="Cvv" type="text" maxlength="3" class="form-control" placeholder="XXX">
                                 <span asp-validation-for="Cvv" class="text-danger"></span>
                             </div>
